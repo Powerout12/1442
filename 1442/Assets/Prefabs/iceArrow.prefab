@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3650811118113330206}
   - component: {fileID: 2705717734050986664}
   - component: {fileID: 8112444581526719157}
+  - component: {fileID: -5980352930354981993}
   m_Layer: 0
   m_Name: iceArrow
   m_TagString: Untagged
@@ -100,3 +101,29 @@ MonoBehaviour:
   arrowLimit: 6
   blast: {fileID: 0}
   blastPos: {fileID: 0}
+--- !u!61 &-5980352930354981993
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407794433413654793}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.24, y: 0.52}
+    newSize: {x: 0.24, y: 0.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.24, y: 0.52}
+  m_EdgeRadius: 0
