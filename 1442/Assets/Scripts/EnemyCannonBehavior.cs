@@ -13,7 +13,7 @@ public class EnemyCannonBehavior : MonoBehaviour
     public float interval = 1f;
     public float damage = 3;
     public float lowerLimit = 10;
-    
+
 
     private float timer;
     // Start is called before the first frame update
@@ -29,9 +29,9 @@ public class EnemyCannonBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //Movement
-       transform.position += new Vector3(0f,-0.4f,0f) * Time.deltaTime * speed; 
-       
+        //Movement
+        transform.Translate(new Vector3(0f, -0.5f, 0f) * Time.deltaTime * speed);
+
         // Cannon faces player
         Vector3 direction = player.transform.position - transform.position;
         float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
