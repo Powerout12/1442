@@ -12,7 +12,11 @@ public class BombBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< Updated upstream
         Destroy(this.gameObject, 1.0f);
+=======
+        Destroy(this.gameObject, 1f);
+>>>>>>> Stashed changes
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
 

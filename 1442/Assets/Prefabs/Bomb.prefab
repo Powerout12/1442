@@ -120,6 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6093635101445021800, guid: 9e8114f62ea7cd841b05bca168fa972d, type: 3}
-  force: 0
+  force: 3
   bombLimit: 11
   damage: 10

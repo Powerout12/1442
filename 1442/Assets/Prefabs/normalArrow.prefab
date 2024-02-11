@@ -11,7 +11,11 @@ GameObject:
   - component: {fileID: 4393437869677658634}
   - component: {fileID: 97677489042148606}
   - component: {fileID: 6767286313994571817}
+<<<<<<< Updated upstream
   - component: {fileID: 4368419366121769960}
+=======
+  - component: {fileID: -3660396734216652295}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: normalArrow
   m_TagString: Untagged
@@ -99,7 +103,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowLimit: 11
+<<<<<<< Updated upstream
 --- !u!61 &4368419366121769960
+=======
+--- !u!61 &-3660396734216652295
+>>>>>>> Stashed changes
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
