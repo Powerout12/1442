@@ -14,12 +14,19 @@ public class PlayerController : MonoBehaviour
     public float verticalScreenLimit = 4f;
     public bool freezing;
     public bool flaming;
+    public AudioClip hitSound;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         speed = 8f;
         freezing = false;
         flaming = false;
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
@@ -29,7 +36,7 @@ public class PlayerController : MonoBehaviour
         Shooting();
     }
 
-    void Movement ()
+    void Movement()
     {
         transform.Translate(new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * Time.deltaTime * speed);
 
@@ -46,7 +53,7 @@ public class PlayerController : MonoBehaviour
         // If y position if greater than vertical screen limit, stop there
         if (transform.position.y >= verticalScreenLimit)
         {
-            transform.position = new Vector3 (transform.position.x, verticalScreenLimit, 0);
+            transform.position = new Vector3(transform.position.x, verticalScreenLimit, 0);
         }
         //If y position is less than vertical screen limit, stop there
         else if (transform.position.y < -verticalScreenLimit)
@@ -55,48 +62,55 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Shooting ()
+    void Shooting()
     {
         // Fire arrow when spacebar is pressed
-        if(Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space"))
         {
-            if(freezing == true)
+            if (freezing == true)
             {
-                Instantiate(iceArrowPrefab, transform.position + new Vector3(0,1,0), Quaternion.identity);
+                Instantiate(iceArrowPrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
                 freezing = false;
             }
-            
-            else if(flaming == true)
+
+            else if (flaming == true)
             {
-                Instantiate(fireArrowPrefab, transform.position + new Vector3(0,1,0), Quaternion.identity);
+                Instantiate(fireArrowPrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
                 flaming = false;
             }
-            
+
             else
             {
-            //Create arrow
-            Instantiate(arrowPrefab, transform.position + new Vector3(0,1,0), Quaternion.identity);
+                //Create arrow
+                Instantiate(arrowPrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (hitSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hitSound);
+        }
+
         PowerUp powerUp = collision.GetComponent<PowerUp>();
         if (powerUp)
         {
-            if(powerUp.iceBoost)
+
+            if (powerUp.iceBoost)
             {
                 freezing = true;
                 flaming = false;
             }
 
-            if(powerUp.fireBoost)
+            if (powerUp.fireBoost)
             {
                 freezing = false;
                 flaming = true;
             }
             Destroy(powerUp.gameObject);
         }
+
     }
 }
