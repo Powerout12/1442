@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5224648983537300462
+--- !u!1 &2983727871236733195
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2150301389344989427}
-  - component: {fileID: 4818609404673699791}
-  - component: {fileID: -6813552107706277621}
-  - component: {fileID: 7555650487720658750}
-  - component: {fileID: -7740087137612803089}
+  - component: {fileID: 7271574081597496180}
+  - component: {fileID: 2353231279154776414}
+  - component: {fileID: 5622927576984191384}
   m_Layer: 0
   m_Name: cannonball
   m_TagString: Untagged
@@ -20,28 +18,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2150301389344989427
+--- !u!4 &7271574081597496180
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5224648983537300462}
+  m_GameObject: {fileID: 2983727871236733195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.951792, y: -6.6922946, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -14.04, y: -8.3, z: 0}
+  m_LocalScale: {x: 1.6028208, y: 1.6028208, z: 1.6028208}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4818609404673699791
+--- !u!212 &2353231279154776414
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5224648983537300462}
+  m_GameObject: {fileID: 2983727871236733195}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -87,44 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!54 &-6813552107706277621
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5224648983537300462}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &7555650487720658750
+--- !u!114 &5622927576984191384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5224648983537300462}
+  m_GameObject: {fileID: 2983727871236733195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd356d149e76fa2479ac120c8f3c3439, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c88986bc91864f4e84fd4d9f4de620b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &-7740087137612803089
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5224648983537300462}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  player: {fileID: 6093635101445021800, guid: 9e8114f62ea7cd841b05bca168fa972d, type: 3}
+  force: 0
+  cannonballLimit: 11
+  damage: 5
